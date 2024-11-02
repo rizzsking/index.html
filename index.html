@@ -49,7 +49,7 @@
         }
 
         .hero {
-            background-image: url('hero-image.jpg'); /* Placeholder for hero image */
+            background-image: url('hero-image.jpg'); /* Use a high-quality hero image here */
             background-size: cover;
             background-position: center;
             height: 350px;
@@ -60,13 +60,17 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             font-size: 2.5em;
             font-weight: 600;
+            margin-bottom: 30px;
         }
 
         .products {
+            background-image: url('products-bg.jpg'); /* Light background texture for product section */
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 40px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 40px;
             gap: 20px;
         }
 
@@ -105,16 +109,17 @@
             font-weight: 600;
         }
 
-        .testimonials, .contact-form {
-            max-width: 800px;
-            margin: 30px auto;
+        .testimonials {
+            background-image: url('testimonials-bg.jpg'); /* Light, soft background pattern */
+            background-size: cover;
             padding: 25px;
-            background-color: #ffffff;
+            margin: 30px auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
         }
 
-        .testimonials h2, .contact-form h2 {
+        .testimonials h2 {
             font-size: 1.6em;
             color: #222;
             margin-bottom: 15px;
@@ -126,6 +131,24 @@
             color: #555;
             font-style: italic;
             margin: 15px 0;
+            text-align: center;
+        }
+
+        .contact-form {
+            background-image: url('contact-bg.jpg'); /* Subtle background pattern */
+            background-size: cover;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .contact-form h2 {
+            font-size: 1.6em;
+            color: #222;
+            margin-bottom: 15px;
+            text-align: center;
         }
 
         .contact-form form {
