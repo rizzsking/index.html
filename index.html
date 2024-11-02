@@ -5,89 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaman Watches</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Basic styling for the layout */
         body {
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fb;
+            background-color: #f5f5f5;
             color: #333;
         }
 
         header {
             background-color: #ffffff;
-            padding: 15px 30px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             margin: 0;
-            color: #222;
-            font-weight: 700;
-            font-size: 1.8em;
+            color: #333;
+            font-weight: bold;
         }
 
         nav {
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            font-size: 1.1em;
-        }
-
-        nav a:hover {
-            color: #007acc;
+            color: #333;
+            font-weight: bold;
         }
 
         .hero {
-            background-image: url('hero-image.jpg'); /* Use a high-quality hero image here */
+            background-image: url('hero-image.jpg'); /* Replace with a simple, professional hero image */
             background-size: cover;
             background-position: center;
-            height: 350px;
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            font-size: 2.5em;
-            font-weight: 600;
-            margin-bottom: 30px;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
         }
 
         .products {
-            background-image: url('products-bg.jpg'); /* Light background texture for product section */
-            background-size: cover;
-            background-attachment: fixed;
-            padding: 40px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            padding: 20px;
             gap: 20px;
+            background-color: #ffffff;
         }
 
         .product {
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 15px;
             text-align: center;
-            background-color: #ffffff;
-            width: 220px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            width: 200px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
         }
 
         .product:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .product img {
@@ -106,55 +93,37 @@
         .product p {
             color: #007acc;
             font-size: 1.1em;
-            font-weight: 600;
+            font-weight: bold;
         }
 
-        .testimonials {
-            background-image: url('testimonials-bg.jpg'); /* Light, soft background pattern */
-            background-size: cover;
-            padding: 25px;
-            margin: 30px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .testimonials, .contact-form {
             max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .testimonials h2 {
+        .testimonials h2, .contact-form h2 {
             font-size: 1.6em;
-            color: #222;
-            margin-bottom: 15px;
+            color: #333;
             text-align: center;
+            margin-bottom: 15px;
         }
 
         .testimonials p {
             font-size: 1em;
             color: #555;
             font-style: italic;
-            margin: 15px 0;
-            text-align: center;
-        }
-
-        .contact-form {
-            background-image: url('contact-bg.jpg'); /* Subtle background pattern */
-            background-size: cover;
-            padding: 25px;
-            margin: 30px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
-
-        .contact-form h2 {
-            font-size: 1.6em;
-            color: #222;
-            margin-bottom: 15px;
+            margin: 10px 0;
             text-align: center;
         }
 
         .contact-form form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
         }
 
         .contact-form label {
@@ -162,25 +131,23 @@
             color: #333;
         }
 
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
+        .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            border: 1px solid #ccc;
             font-size: 1em;
         }
 
         .contact-form input[type="submit"] {
             width: 150px;
             padding: 10px;
-            font-size: 1em;
             color: #ffffff;
             background-color: #007acc;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
             align-self: center;
         }
 
@@ -190,9 +157,9 @@
 
         footer {
             text-align: center;
-            padding: 15px;
-            background-color: #222;
-            color: #f1f1f1;
+            padding: 20px;
+            background-color: #333;
+            color: white;
             font-size: 0.9em;
         }
     </style>
@@ -214,17 +181,17 @@
 
     <section id="products" class="products">
         <div class="product">
-            <img src="watch1.jpg" alt="Watch 1"> <!-- Placeholder for product image -->
+            <img src="watch1.jpg" alt="Watch 1"> <!-- Replace with actual product image -->
             <h3>Luxury Watch 1</h3>
             <p>$199</p>
         </div>
         <div class="product">
-            <img src="watch2.jpg" alt="Watch 2"> <!-- Placeholder for product image -->
+            <img src="watch2.jpg" alt="Watch 2"> <!-- Replace with actual product image -->
             <h3>Luxury Watch 2</h3>
             <p>$299</p>
         </div>
         <div class="product">
-            <img src="watch3.jpg" alt="Watch 3"> <!-- Placeholder for product image -->
+            <img src="watch3.jpg" alt="Watch 3"> <!-- Replace with actual product image -->
             <h3>Luxury Watch 3</h3>
             <p>$399</p>
         </div>
@@ -235,7 +202,6 @@
         <h2>What Our Customers Say</h2>
         <p>"Best watches I've ever purchased!" - John Doe</p>
         <p>"Quality and style at its best." - Jane Smith</p>
-        <!-- Add more testimonials as needed -->
     </section>
 
     <section id="contact" class="contact-form">
